@@ -18,7 +18,7 @@ class Manager():
 	
 	def __init__(self):
 		self.objects_list = []
-		self.shape1 = [(200,  -50), (0, 0), (50, 0), (0, 50), (50, 50)]
+		self.shape1 = [[(200,  -50), (0, 0), (50, 0), (0, 50), (50, 50)]]
 		self.shape2 = [[(200, -150), (0, 0), (0, 50), (0, 100), (0, 150)], [(200, 0), (0, 0), (50, 0), (100, 0), (150, 0)]]	
 		self.shape3 = [[(200, -50), (0, 0), (50, 0), (50, 50), (100, 50)], [(200, -100), (50, 0), (0, 50), (50, 50), (0, 100)]]
 		self.shape4 = [[(200, -50), (50, 0), (100, 0), (0, 50), (50, 50)], [(200, -100), (0, 0), (0, 50), (50, 50), (50, 100)]]
@@ -40,8 +40,7 @@ class Manager():
 			self.reference_coordinate_y = self.shape[0][1]
 			self.x = self.reference_coordinate_x + self.shape[i][0]
 			self.y = self.reference_coordinate_y + self.shape[i][1]
-			self.objects_list.append(Brick(self.x, self.y))	
-			print(self.x, self.y)	
+			self.objects_list.append(Brick(self.x, self.y))		
 	
 	def ShouldFall(self):
 		self.x = self.objects_list[-1].x
@@ -94,4 +93,5 @@ class Manager():
 		return list_to_return
 
 Manage = Manager() #This object is to be imported
-Manage.NewShape()
+while True:
+	Manage.NewShape()
