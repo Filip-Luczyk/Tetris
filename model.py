@@ -93,5 +93,4 @@ class Manager():
 		return list_to_return
 
 Manage = Manager() #This object is to be imported
-while True:
-	Manage.NewShape()
+Manage.NewShape()
